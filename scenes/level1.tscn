@@ -1,9 +1,14 @@
-[gd_scene load_steps=5 format=3 uid="uid://bobre5qknmjab"]
+[gd_scene load_steps=7 format=3 uid="uid://blxgbdmwqr3bo"]
 
 [ext_resource type="Script" path="res://scripts/controller.gd" id="1_kflia"]
 [ext_resource type="PackedScene" uid="uid://cs6sv2yq8b020" path="res://scenes/ball.tscn" id="2_kw63x"]
 [ext_resource type="PackedScene" uid="uid://cla1m1k8pal2b" path="res://scenes/player.tscn" id="3_tschn"]
 [ext_resource type="PackedScene" uid="uid://bkwdi5l7mf7no" path="res://scenes/block.tscn" id="4_24naa"]
+[ext_resource type="FontFile" uid="uid://d361ynrwsa17f" path="res://fonts/RetroGaming.ttf" id="5_1qb3u"]
+
+[sub_resource type="Theme" id="Theme_ccqpi"]
+default_font = ExtResource("5_1qb3u")
+default_font_size = 22
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_kflia")
@@ -199,7 +204,12 @@ position = Vector2(96, 131)
 [node name="block60" parent="Blocks" instance=ExtResource("4_24naa")]
 position = Vector2(500, 131)
 
-[node name="Camera2D" type="Camera2D" parent="."]
-anchor_mode = 0
+[node name="Score" type="Label" parent="."]
+offset_left = 242.0
+offset_top = 57.0
+offset_right = 357.0
+offset_bottom = 88.0
+theme = SubResource("Theme_ccqpi")
+text = "Score: 0"
 
 [connection signal="game_over" from="Ball" to="." method="_on_ball_game_over"]

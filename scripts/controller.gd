@@ -11,7 +11,10 @@ func _ready():
 
 func _on_addScore():
 	score += 1
-	print(score)
+	self.get_node("Score").text = "Score: %s" % score
+	# print(score)
+	if(score >= 55):
+		get_tree().change_scene_to_file("res://scenes/Menu.tscn")
 
 func _on_ball_game_over():
 	get_tree().change_scene_to_file("res://scenes/Menu.tscn")
