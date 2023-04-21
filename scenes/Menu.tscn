@@ -1,0 +1,35 @@
+[gd_scene load_steps=4 format=3 uid="uid://dosreymgsr27c"]
+
+[ext_resource type="FontFile" uid="uid://d361ynrwsa17f" path="res://fonts/RetroGaming.ttf" id="1_lbhae"]
+[ext_resource type="Script" path="res://scripts/Menu.gd" id="1_pqpgc"]
+
+[sub_resource type="Theme" id="Theme_8a2sw"]
+default_font = ExtResource("1_lbhae")
+Button/fonts/font = ExtResource("1_lbhae")
+
+[node name="Menu" type="MenuBar"]
+theme_override_fonts/font = ExtResource("1_lbhae")
+script = ExtResource("1_pqpgc")
+metadata/_edit_vertical_guides_ = [300.0]
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 221.0
+offset_top = 483.0
+offset_right = 381.0
+offset_bottom = 542.0
+theme = SubResource("Theme_8a2sw")
+text = "LEVEL 1"
+icon_alignment = 1
+
+[node name="Button2" type="Button" parent="."]
+layout_mode = 0
+offset_left = 220.0
+offset_top = 570.0
+offset_right = 381.0
+offset_bottom = 628.0
+theme = SubResource("Theme_8a2sw")
+text = "EXIT"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_EXIT_pressed"]

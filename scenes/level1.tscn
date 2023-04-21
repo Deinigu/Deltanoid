@@ -1,113 +1,205 @@
 [gd_scene load_steps=5 format=3 uid="uid://bobre5qknmjab"]
 
-[ext_resource type="PackedScene" uid="uid://cs6sv2yq8b020" path="res://scenes/ball.tscn" id="1_ged51"]
-[ext_resource type="Script" path="res://scripts/controller.gd" id="1_wqmko"]
-[ext_resource type="PackedScene" uid="uid://cla1m1k8pal2b" path="res://scenes/player.tscn" id="2_7fmum"]
-[ext_resource type="PackedScene" uid="uid://bkwdi5l7mf7no" path="res://scenes/block.tscn" id="4_awg8r"]
+[ext_resource type="Script" path="res://scripts/controller.gd" id="1_kflia"]
+[ext_resource type="PackedScene" uid="uid://cs6sv2yq8b020" path="res://scenes/ball.tscn" id="2_kw63x"]
+[ext_resource type="PackedScene" uid="uid://cla1m1k8pal2b" path="res://scenes/player.tscn" id="3_tschn"]
+[ext_resource type="PackedScene" uid="uid://bkwdi5l7mf7no" path="res://scenes/block.tscn" id="4_24naa"]
 
 [node name="Node2D" type="Node2D"]
-script = ExtResource("1_wqmko")
+script = ExtResource("1_kflia")
 metadata/_edit_horizontal_guides_ = [83.0, 57.0]
 metadata/_edit_vertical_guides_ = [300.0]
 
-[node name="Ball" parent="." groups=["ball"] instance=ExtResource("1_ged51")]
-position = Vector2(300, 645)
+[node name="Ball" parent="." groups=["ball"] instance=ExtResource("2_kw63x")]
+position = Vector2(300, 618)
 
-[node name="Player" parent="." instance=ExtResource("2_7fmum")]
+[node name="Player" parent="." instance=ExtResource("3_tschn")]
 
 [node name="Blocks" type="CanvasGroup" parent="."]
 position = Vector2(2, 0)
 metadata/_edit_group_ = true
 
-[node name="block" parent="Blocks" instance=ExtResource("4_awg8r")]
+[node name="block" parent="Blocks" instance=ExtResource("4_24naa")]
 position = Vector2(298, 401)
 
-[node name="block2" parent="Blocks" instance=ExtResource("4_awg8r")]
+[node name="block2" parent="Blocks" instance=ExtResource("4_24naa")]
 position = Vector2(197, 401)
 
-[node name="block3" parent="Blocks" instance=ExtResource("4_awg8r")]
+[node name="block3" parent="Blocks" instance=ExtResource("4_24naa")]
 position = Vector2(399, 401)
 
-[node name="block4" parent="Blocks" instance=ExtResource("4_awg8r")]
+[node name="block4" parent="Blocks" instance=ExtResource("4_24naa")]
 position = Vector2(96, 401)
 
-[node name="block5" parent="Blocks" instance=ExtResource("4_awg8r")]
+[node name="block5" parent="Blocks" instance=ExtResource("4_24naa")]
 position = Vector2(500, 401)
 
-[node name="block6" parent="Blocks" instance=ExtResource("4_awg8r")]
+[node name="block6" parent="Blocks" instance=ExtResource("4_24naa")]
 position = Vector2(298, 374)
 
-[node name="block7" parent="Blocks" instance=ExtResource("4_awg8r")]
+[node name="block7" parent="Blocks" instance=ExtResource("4_24naa")]
 position = Vector2(197, 374)
 
-[node name="block8" parent="Blocks" instance=ExtResource("4_awg8r")]
+[node name="block8" parent="Blocks" instance=ExtResource("4_24naa")]
 position = Vector2(399, 374)
 
-[node name="block9" parent="Blocks" instance=ExtResource("4_awg8r")]
+[node name="block9" parent="Blocks" instance=ExtResource("4_24naa")]
 position = Vector2(96, 374)
 
-[node name="block10" parent="Blocks" instance=ExtResource("4_awg8r")]
+[node name="block10" parent="Blocks" instance=ExtResource("4_24naa")]
 position = Vector2(500, 374)
 
-[node name="block11" parent="Blocks" instance=ExtResource("4_awg8r")]
+[node name="block11" parent="Blocks" instance=ExtResource("4_24naa")]
 position = Vector2(298, 347)
 
-[node name="block12" parent="Blocks" instance=ExtResource("4_awg8r")]
+[node name="block12" parent="Blocks" instance=ExtResource("4_24naa")]
 position = Vector2(197, 347)
 
-[node name="block13" parent="Blocks" instance=ExtResource("4_awg8r")]
+[node name="block13" parent="Blocks" instance=ExtResource("4_24naa")]
 position = Vector2(399, 347)
 
-[node name="block14" parent="Blocks" instance=ExtResource("4_awg8r")]
+[node name="block14" parent="Blocks" instance=ExtResource("4_24naa")]
 position = Vector2(96, 347)
 
-[node name="block15" parent="Blocks" instance=ExtResource("4_awg8r")]
+[node name="block15" parent="Blocks" instance=ExtResource("4_24naa")]
 position = Vector2(500, 347)
 
-[node name="block16" parent="Blocks" instance=ExtResource("4_awg8r")]
+[node name="block16" parent="Blocks" instance=ExtResource("4_24naa")]
 position = Vector2(298, 320)
 
-[node name="block17" parent="Blocks" instance=ExtResource("4_awg8r")]
+[node name="block17" parent="Blocks" instance=ExtResource("4_24naa")]
 position = Vector2(197, 320)
 
-[node name="block18" parent="Blocks" instance=ExtResource("4_awg8r")]
+[node name="block18" parent="Blocks" instance=ExtResource("4_24naa")]
 position = Vector2(399, 320)
 
-[node name="block19" parent="Blocks" instance=ExtResource("4_awg8r")]
+[node name="block19" parent="Blocks" instance=ExtResource("4_24naa")]
 position = Vector2(96, 320)
 
-[node name="block20" parent="Blocks" instance=ExtResource("4_awg8r")]
+[node name="block20" parent="Blocks" instance=ExtResource("4_24naa")]
 position = Vector2(500, 320)
 
-[node name="block21" parent="Blocks" instance=ExtResource("4_awg8r")]
+[node name="block21" parent="Blocks" instance=ExtResource("4_24naa")]
 position = Vector2(298, 293)
 
-[node name="block22" parent="Blocks" instance=ExtResource("4_awg8r")]
+[node name="block22" parent="Blocks" instance=ExtResource("4_24naa")]
 position = Vector2(197, 293)
 
-[node name="block23" parent="Blocks" instance=ExtResource("4_awg8r")]
+[node name="block23" parent="Blocks" instance=ExtResource("4_24naa")]
 position = Vector2(399, 293)
 
-[node name="block24" parent="Blocks" instance=ExtResource("4_awg8r")]
+[node name="block24" parent="Blocks" instance=ExtResource("4_24naa")]
 position = Vector2(96, 293)
 
-[node name="block25" parent="Blocks" instance=ExtResource("4_awg8r")]
+[node name="block25" parent="Blocks" instance=ExtResource("4_24naa")]
 position = Vector2(500, 293)
 
-[node name="block26" parent="Blocks" instance=ExtResource("4_awg8r")]
+[node name="block26" parent="Blocks" instance=ExtResource("4_24naa")]
 position = Vector2(298, 266)
 
-[node name="block27" parent="Blocks" instance=ExtResource("4_awg8r")]
+[node name="block27" parent="Blocks" instance=ExtResource("4_24naa")]
 position = Vector2(197, 266)
 
-[node name="block28" parent="Blocks" instance=ExtResource("4_awg8r")]
+[node name="block28" parent="Blocks" instance=ExtResource("4_24naa")]
 position = Vector2(399, 266)
 
-[node name="block29" parent="Blocks" instance=ExtResource("4_awg8r")]
+[node name="block29" parent="Blocks" instance=ExtResource("4_24naa")]
 position = Vector2(96, 266)
 
-[node name="block30" parent="Blocks" instance=ExtResource("4_awg8r")]
+[node name="block30" parent="Blocks" instance=ExtResource("4_24naa")]
 position = Vector2(500, 266)
+
+[node name="block31" parent="Blocks" instance=ExtResource("4_24naa")]
+position = Vector2(298, 266)
+
+[node name="block32" parent="Blocks" instance=ExtResource("4_24naa")]
+position = Vector2(197, 266)
+
+[node name="block33" parent="Blocks" instance=ExtResource("4_24naa")]
+position = Vector2(399, 266)
+
+[node name="block34" parent="Blocks" instance=ExtResource("4_24naa")]
+position = Vector2(96, 266)
+
+[node name="block35" parent="Blocks" instance=ExtResource("4_24naa")]
+position = Vector2(500, 266)
+
+[node name="block36" parent="Blocks" instance=ExtResource("4_24naa")]
+position = Vector2(298, 239)
+
+[node name="block37" parent="Blocks" instance=ExtResource("4_24naa")]
+position = Vector2(197, 239)
+
+[node name="block38" parent="Blocks" instance=ExtResource("4_24naa")]
+position = Vector2(399, 239)
+
+[node name="block39" parent="Blocks" instance=ExtResource("4_24naa")]
+position = Vector2(96, 239)
+
+[node name="block40" parent="Blocks" instance=ExtResource("4_24naa")]
+position = Vector2(500, 239)
+
+[node name="block41" parent="Blocks" instance=ExtResource("4_24naa")]
+position = Vector2(298, 212)
+
+[node name="block42" parent="Blocks" instance=ExtResource("4_24naa")]
+position = Vector2(197, 212)
+
+[node name="block43" parent="Blocks" instance=ExtResource("4_24naa")]
+position = Vector2(399, 212)
+
+[node name="block44" parent="Blocks" instance=ExtResource("4_24naa")]
+position = Vector2(96, 212)
+
+[node name="block45" parent="Blocks" instance=ExtResource("4_24naa")]
+position = Vector2(500, 212)
+
+[node name="block46" parent="Blocks" instance=ExtResource("4_24naa")]
+position = Vector2(298, 185)
+
+[node name="block47" parent="Blocks" instance=ExtResource("4_24naa")]
+position = Vector2(197, 185)
+
+[node name="block48" parent="Blocks" instance=ExtResource("4_24naa")]
+position = Vector2(399, 185)
+
+[node name="block49" parent="Blocks" instance=ExtResource("4_24naa")]
+position = Vector2(96, 185)
+
+[node name="block50" parent="Blocks" instance=ExtResource("4_24naa")]
+position = Vector2(500, 185)
+
+[node name="block51" parent="Blocks" instance=ExtResource("4_24naa")]
+position = Vector2(298, 158)
+
+[node name="block52" parent="Blocks" instance=ExtResource("4_24naa")]
+position = Vector2(197, 158)
+
+[node name="block53" parent="Blocks" instance=ExtResource("4_24naa")]
+position = Vector2(399, 158)
+
+[node name="block54" parent="Blocks" instance=ExtResource("4_24naa")]
+position = Vector2(96, 158)
+
+[node name="block55" parent="Blocks" instance=ExtResource("4_24naa")]
+position = Vector2(500, 158)
+
+[node name="block56" parent="Blocks" instance=ExtResource("4_24naa")]
+position = Vector2(298, 131)
+
+[node name="block57" parent="Blocks" instance=ExtResource("4_24naa")]
+position = Vector2(197, 131)
+
+[node name="block58" parent="Blocks" instance=ExtResource("4_24naa")]
+position = Vector2(399, 131)
+
+[node name="block59" parent="Blocks" instance=ExtResource("4_24naa")]
+position = Vector2(96, 131)
+
+[node name="block60" parent="Blocks" instance=ExtResource("4_24naa")]
+position = Vector2(500, 131)
 
 [node name="Camera2D" type="Camera2D" parent="."]
 anchor_mode = 0
+
+[connection signal="game_over" from="Ball" to="." method="_on_ball_game_over"]
