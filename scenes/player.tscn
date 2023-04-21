@@ -1,0 +1,53 @@
+[gd_scene load_steps=7 format=3 uid="uid://cla1m1k8pal2b"]
+
+[ext_resource type="Texture2D" uid="uid://h64qik8a50ji" path="res://assets/player.png" id="1_0ialb"]
+[ext_resource type="Script" path="res://scripts/player.gd" id="1_7pqvv"]
+[ext_resource type="Texture2D" uid="uid://dvttkvaegi8so" path="res://assets/playerhit.png" id="3_5ikuk"]
+[ext_resource type="Texture2D" uid="uid://ccoh1mgval3lx" path="res://assets/playerscore.png" id="3_o777s"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_00a1s"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_0ialb")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_5ikuk")
+}],
+"loop": true,
+"name": &"hit",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_o777s")
+}],
+"loop": true,
+"name": &"score",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_j4qg1"]
+size = Vector2(100.8, 13.5998)
+
+[node name="Player" type="Area2D"]
+position = Vector2(300, 855)
+scale = Vector2(1.35, 1.35)
+script = ExtResource("1_7pqvv")
+metadata/_edit_group_ = true
+
+[node name="AnimationSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_00a1s")
+animation = &"hit"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-3.05176e-05, -5.99994)
+shape = SubResource("RectangleShape2D_j4qg1")
+debug_color = Color(0, 0.6, 0.701961, 0.419608)
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]

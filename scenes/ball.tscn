@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://cs6sv2yq8b020"]
+
+[ext_resource type="Script" path="res://scripts/ball.gd" id="1_a00t3"]
+[ext_resource type="Texture2D" uid="uid://cpfcb82wli655" path="res://assets/ball.png" id="2_sjsqn"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_2dfop"]
+radius = 14.0
+height = 28.0
+
+[node name="Ball" type="Area2D"]
+position = Vector2(272, 375)
+script = ExtResource("1_a00t3")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_sjsqn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_2dfop")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]

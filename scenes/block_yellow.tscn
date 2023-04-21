@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://bptbmb2pw0dh5"]
+
+[ext_resource type="Script" path="res://scripts/block.gd" id="1_lii7t"]
+[ext_resource type="Texture2D" uid="uid://dvcnx1e8wtssn" path="res://assets/block_yellow.png" id="2_cq3ud"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_j3lo1"]
+size = Vector2(100, 26)
+
+[node name="block" type="Area2D"]
+script = ExtResource("1_lii7t")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_cq3ud")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_j3lo1")
+debug_color = Color(0, 0.6, 0.701961, 0)
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
