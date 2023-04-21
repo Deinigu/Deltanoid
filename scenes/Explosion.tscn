@@ -1,4 +1,11 @@
-[gd_scene load_steps=3 format=3 uid="uid://ctwsd2datytx0"]
+[gd_scene load_steps=5 format=3 uid="uid://ctwsd2datytx0"]
+
+[sub_resource type="Gradient" id="Gradient_nbc6m"]
+offsets = PackedFloat32Array(0.0075188, 1)
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_oyq2j"]
+gradient = SubResource("Gradient_nbc6m")
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_ujwfo"]
 emission_shape = 1
@@ -10,12 +17,17 @@ initial_velocity_min = 30.0
 initial_velocity_max = 30.0
 linear_accel_min = 10.0
 linear_accel_max = 10.0
-color = Color(1, 0, 0.14902, 1)
+scale_min = 3.0
+scale_max = 3.0
+color = Color(0.85098, 0.341176, 0.388235, 1)
+color_ramp = SubResource("GradientTexture1D_oyq2j")
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_hgjl2"]
 
 [node name="Explosion" type="GPUParticles2D"]
-amount = 50
+scale = Vector2(5, 5)
+amount = 100
 process_material = SubResource("ParticleProcessMaterial_ujwfo")
 texture = SubResource("CanvasTexture_hgjl2")
-lifetime = 0.35
+lifetime = 1.5
+explosiveness = 1.0
